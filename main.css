@@ -1,0 +1,77 @@
+:root {
+    --pink: #fa8cd7;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #1e1e1e;
+}
+
+* {
+    color: var(--fontColor);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--list-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: fit-content;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+.light-theme {
+    --bg: var(--pink);
+    --fontColor: var(--black);
+    --btnbg: var(--black);
+    --btnFontColor: var(--white);
+    --list-bg: rgba(255, 255, 255, 0.7);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--pink);
+    --btnbg: var(--white);
+    --btnFontColor: var(--black);
+    --list-bg: rgba(30, 30, 30, 0.8);
+}
+
+.btn {
+    margin-top: 20px;
+    height: 50px;
+    width: 100px;
+    border-radius: 25px;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnbg);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--btnFontColor);
+}
+
+.btn:focus {
+    outline: none;
+}
